@@ -34,7 +34,7 @@ async def check_if_admin(message):
 
 
 @bot.on(
-    events.NewMessage(incoming=True, pattern="^/start$", func=lambda e: e.is_private)
+    events.NewMessage(incoming=True, pattern="^/stadamavbothht$", func=lambda e: e.is_private)
 )
 async def start_msg(event):
     sender = await bot.get_entity(event.sender_id)
@@ -58,7 +58,7 @@ async def start_msg(event):
     )
 
 
-@bot.on(events.NewMessage(incoming=True, pattern="^/start", func=lambda e: e.is_group))
+@bot.on(events.NewMessage(incoming=True, pattern="^/shidamantgftart", func=lambda e: e.is_group))
 async def start_grp(event):
     sender = await bot.get_entity(event.sender_id)
     await event.reply(
@@ -117,7 +117,7 @@ async def deleter_(event):
     if detected:
         try:
             await event.reply(
-                f"Hey {sender.first_name}, you used a blacklisted word and so your message has been deleted!"
+                f"Hey [{}](tg://user?id={})!, you used a blacklisted word and so your message has been deleted!"
             )
             await event.delete()
         except:
