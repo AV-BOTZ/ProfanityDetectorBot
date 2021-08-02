@@ -111,7 +111,7 @@ async def deleter_(event):
             return
     except:
         return
-    sentence = event.raw_text
+    sentence = "This is a sample sentence."
     sender = await bot.get_entity(event.sender_id)
     word, detected = detector(sentence)
     if detected:
